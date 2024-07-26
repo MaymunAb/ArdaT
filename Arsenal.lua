@@ -242,7 +242,7 @@ esp.TextSize = 14.000
 esp.TextWrapped = true
 
 UICorner_6.Parent = esp
-
+local tween = tweenService:Create(ArsenalFrame, arsenalFrameTWINFO, {Size = UDim2.new(0.3,0,0.4,0)}):Play()
 createNotification("Bildirim", "ArdaT istemcisi başarılı bir şekilde yüklendi",3, 10,"Tr. Green")
 createNotification("Uyarı", "Her oyunda ban yeme riski vardır.Çok Belli Etmeden Oynayın",5, 15,"Tr. Red")
 
