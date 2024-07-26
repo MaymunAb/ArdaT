@@ -223,7 +223,9 @@ InfiniteYield.TextColor3 = Color3.fromRGB(255, 255, 255)
 InfiniteYield.TextScaled = true
 InfiniteYield.TextSize = 14.000
 InfiniteYield.TextWrapped = true
-
+InfiniteYield.MouseButton1Down:Connect(function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
 UICorner_5.Parent = InfiniteYield
 
 esp.Name = "esp"
