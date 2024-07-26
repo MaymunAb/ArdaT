@@ -88,9 +88,9 @@ LoaderFrame.Parent = Loader
 LoaderFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 LoaderFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 LoaderFrame.BorderSizePixel = 0
-LoaderFrame.Position = UDim2.new(0.5, 0, 0.33, 0)
-LoaderFrame.Size = UDim2.new(0, 0, 0.35, 0)
-LoaderFrame.AnchorPoint = Vector2.new(0.5,0)
+LoaderFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+LoaderFrame.Size = UDim2.new(0, 0, 0, 0)
+LoaderFrame.AnchorPoint = Vector2.new(0.5,0.5)
 
 UICorner.CornerRadius = UDim.new(0, 15)
 UICorner.Parent = LoaderFrame
@@ -174,8 +174,8 @@ print("✅[ArdaT Client]:Loaded! ", versionText.Text)
 
 local function Load()
 	createNotification("Notification", "ArdaT Is Loading", 3, 10, "Tr. Green")
-	local tween = TweenService:Create(LoaderFrame, TweenInfo.new(0.5, Enum.EasingStyle.Sine ,Enum.EasingDirection.In, 0, false, 0.5), {Size = UDim2.new(0.25,0,0.35,0)}):Play()
-	local barTween = TweenService:Create(Bar, TweenInfo.new(3, Enum.EasingStyle.Sine ,Enum.EasingDirection.In, 0, false, 0), {Size = UDim2.new(1,0,1,0)})
+	local tween = TweenService:Create(LoaderFrame, TweenInfo.new(1, Enum.EasingStyle.Cubic ,Enum.EasingDirection.InOut, 0, false, 0.5), {Size = UDim2.new(0.25,0,0.35,0)}):Play()
+	local barTween = TweenService:Create(Bar, TweenInfo.new(3, Enum.EasingStyle.Quad ,Enum.EasingDirection.In, 0, false, 0), {Size = UDim2.new(1,0,1,0)})
 	wait(3)
 	barTween:Play()
 	wait(3.5)
