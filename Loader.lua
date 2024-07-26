@@ -179,7 +179,7 @@ local function Load()
 	wait(3)
 	barTween:Play()
 	wait(3.5)
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/MaymunAb/ArdaT/main/GameSelector.lua'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/MaymunAb/ArdaT/main/Hub.lua'))()
 	wait(0.01)
 	Loader:Destroy()
 end
