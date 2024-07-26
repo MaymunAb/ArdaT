@@ -67,9 +67,33 @@ function createNotification(title, content, notificationTime, zindex, brickColor
 	Notification:Destroy()
 end
 
+function enableClientAntikick()
+	if not hookmetamethod then 
+		createNotification("Uyarı!", "Hileniz (HookMetaMethod) fonksiyonunu desteklemiyor.", 3, 150, "Tr. Red")
+		return
+	end
+	local LocalPlayer = Players.LocalPlayer
+	local oldhmmi
+	local oldhmmnc
+	oldhmmi = hookmetamethod(game, "__index", function(self, method)
+		if self == LocalPlayer and method:lower() == "kick" then
+			return error("Expected ':' not '.' calling member function Kick", 2)
+		end
+		return oldhmmi(self, method)
+	end)
+	oldhmmnc = hookmetamethod(game, "__namecall", function(self, ...)
+		if self == LocalPlayer and getnamecallmethod():lower() == "kick" then
+			return
+		end
+		return oldhmmnc(self, ...)
+	end)
+	createNotification("Başarılı ☑️", "Local Hile Korumaları Artık Sizi sunucudan atamaz(sunucu hile korumaları hariç)", 3, 150, "Tr. Green")
+end
+print("Enabling Anti Kick")
+enableClientAntikick()
 if game.PlaceId == 6441847031 then
   print("Detected:Chaos")
-  createNotification("Oyun Destekleniyor!", "lütfen kodun çalıştırılmasını Bekleyiniz..", 3, 100, "Tr. Green")
+  createNotification("Oyun Destekleniyor!", "lütfen kodun çalıştırılmasını Bekleyiniz..", 2.5, 100, "Tr. Green")
   loadstring(game:HttpGet('https://raw.githubusercontent.com/MaymunAb/ArdaT/main/Chaos.lua'))()
 else
   createNotification("Oyun Desteklenmiyor", "Lütfen ArdaT'ın Desteklenen Oyunlar Listesine Bakınız", 3, 100, "Tr. Red")
