@@ -68,6 +68,7 @@ function createNotification(title, content, notificationTime, zindex, brickColor
 end
 
 function enableClientAntikick()
+	local Players = game:GetService("Players")
 	if not hookmetamethod then 
 		createNotification("Uyarı!", "Hileniz (HookMetaMethod) fonksiyonunu desteklemiyor.", 3, 150, "Tr. Red")
 		return
