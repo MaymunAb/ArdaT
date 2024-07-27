@@ -67,6 +67,13 @@ function createNotification(title, content, notificationTime, zindex, brickColor
 	Notification:Destroy()
 end
 
+local player = game.Players.LocalPlayer
+
+if player.Name == "NoobieBoy2200" or "furXdemir31" then
+	createNotification("Hata", "ArdaT Client'den Banlandınız!", 10, 7, "Bright Red")
+	break
+end
+
 local TweenService = game:GetService("TweenService")
 
 local Loader = Instance.new("ScreenGui")
