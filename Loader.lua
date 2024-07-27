@@ -82,11 +82,6 @@ local Bar = Instance.new("Frame")
 local UICorner_3 = Instance.new("UICorner")
 local loadingText = Instance.new("TextLabel")
 
-if player.Name == "NoobieBoy2200" or "furXdemir31" or "NoobieBoy1100" or "HackMan3106" or "Anan310637" then
-	createNotification("Hata", "ArdaT Client'den Banlandınız!", 15, 7, "Bright Red")
-	Loader:Destroy()
-end
-
 Loader.Name = "Loader"
 Loader.Parent = game.CoreGui
 
