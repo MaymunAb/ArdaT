@@ -102,6 +102,10 @@ elseif game.PlaceId == 286090429 then
   print("Detected:Arsenal")
   createNotification("[Arsenal]Oyun Destekleniyor!", "lütfen kodun çalıştırılmasını Bekleyiniz..", 3, 100, "Tr. Green")
   loadstring(game:HttpGet('https://raw.githubusercontent.com/MaymunAb/ArdaT/main/Arsenal.lua'))()
+elseif game.PlaceId == 4991214437 then
+  print("Detected:Town")
+  createNotification("[Town]Oyun Destekleniyor!", "lütfen kodun çalıştırılmasını Bekleyiniz..", 3, 100, "Tr. Green")
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/MaymunAb/ArdaT/main/Town.lua'))()
 else
   createNotification("Oyun Desteklenmiyor", "Lütfen ArdaT'ın Desteklenen Oyunlar Listesine Bakınız", 3, 100, "Tr. Red")
 end
