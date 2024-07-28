@@ -88,7 +88,6 @@ function enableClientAntikick()
 		end
 		return oldhmmnc(self, ...)
 	end)
-	createNotification("Başarılı ☑️", "Local Hile Korumaları Artık Sizi sunucudan atamaz(sunucu hile korumaları hariç)", 3, 150, "Tr. Green")
 end
 
 print("Enabling Anti Kick")
@@ -96,16 +95,16 @@ enableClientAntikick()
 
 if game.PlaceId == 6441847031 then
   print("Detected:Chaos")
-  createNotification("[Chaos]Oyun Destekleniyor!", "lütfen kodun çalıştırılmasını Bekleyiniz..", 3, 100, "Tr. Green")
+  createNotification("[Chaos]Oyun Destekleniyor!", "lütfen kodun çalıştırılmasını Bekleyiniz..", 2, 100, "Tr. Green")
   loadstring(game:HttpGet('https://raw.githubusercontent.com/MaymunAb/ArdaT/main/Chaos.lua'))()
 elseif game.PlaceId == 286090429 then
   print("Detected:Arsenal")
-  createNotification("[Arsenal]Oyun Destekleniyor!", "lütfen kodun çalıştırılmasını Bekleyiniz..", 3, 100, "Tr. Green")
+  createNotification("[Arsenal]Oyun Destekleniyor!", "lütfen kodun çalıştırılmasını Bekleyiniz..", 2, 100, "Tr. Green")
   loadstring(game:HttpGet('https://raw.githubusercontent.com/MaymunAb/ArdaT/main/Arsenal.lua'))()
 elseif game.PlaceId == 4991214437 then
   print("Detected:Town")
-  createNotification("[Town]Oyun Destekleniyor!", "lütfen kodun çalıştırılmasını Bekleyiniz..", 3, 100, "Tr. Green")
+  createNotification("[Town]Oyun Destekleniyor!", "lütfen kodun çalıştırılmasını Bekleyiniz..", 2, 100, "Tr. Green")
   loadstring(game:HttpGet('https://raw.githubusercontent.com/MaymunAb/ArdaT/main/Town.lua'))()
 else
-  createNotification("Oyun Desteklenmiyor", "Lütfen ArdaT'ın Desteklenen Oyunlar Listesine Bakınız", 3, 100, "Tr. Red")
+  createNotification("Oyun Desteklenmiyor", "Lütfen ArdaT'ın Desteklenen Oyunlar Listesine Bakınız", 2, 100, "Tr. Red")
 end
