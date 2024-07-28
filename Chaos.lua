@@ -317,5 +317,5 @@ UICorner_7.Parent = OpenUI
 wait(0.5)
 print("ArdaT Chaos Script Loaded!")
 local tween = tweenService:Create(ChaosFrame, chaosFrameTWINFO, {Size = UDim2.new(0.3,0,0.4,0)}):Play()
-createNotification("Bildirim", "ArdaT istemcisi başarılı bir şekilde yüklendi",5, 10,"Tr. Green")
-createNotification("Uyarı", "Her oyunda ban yeme riski vardır.Çok Belli Etmeden Oynayın",10, 15,"Tr. Red")
+createNotification("Bildirim", "ArdaT istemcisi başarılı bir şekilde yüklendi",3, 10,"Tr. Green")
+createNotification("Uyarı", "Her oyunda ban yeme riski vardır.Çok Belli Etmeden Oynayın",5, 15,"Tr. Red")
