@@ -141,7 +141,7 @@ UICorner_2.Parent = BarBackground
 
 Bar.Name = "Bar"
 Bar.Parent = BarBackground
-Bar.BackgroundColor3 = Color3.fromRGB(182, 255, 169)
+Bar.BackgroundColor3 = Color3.fromRGB(255,255,255)
 Bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Bar.BorderSizePixel = 0
 Bar.Size = UDim2.new(0, 0, 1, 0)
@@ -170,7 +170,7 @@ uiStroke.Thickness = 4
 
 local uiStroke1 = Instance.new("UIStroke", BarBackground)
 uiStroke1.Color = Color3.new(1,1,1)
-uiStroke1.Thickness = 2
+uiStroke1.Thickness = 3
 
 print("✅[ArdaT Client]:Loaded! ", versionText.Text)
 
