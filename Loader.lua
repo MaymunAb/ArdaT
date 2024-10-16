@@ -175,7 +175,7 @@ uiStroke1.Thickness = 3
 print("✅[ArdaT Client]:Loaded! ", versionText.Text)
 
 local function Load()
-	createNotification("Bildirim", "ArdaT Yükleniyor", 2, 10, "Tr. Green")
+	createNotification("Bildirim", "ArdaT V2 Yükleniyor", 2, 10, "Light green")
 	local tween = TweenService:Create(LoaderFrame, TweenInfo.new(1, Enum.EasingStyle.Cubic ,Enum.EasingDirection.InOut, 0, false, 0.5), {Size = UDim2.new(0.25,0,0.35,0)}):Play()
 	local barTween = TweenService:Create(Bar, TweenInfo.new(3, Enum.EasingStyle.Quad ,Enum.EasingDirection.In, 0, false, 0), {Size = UDim2.new(1,0,1,0)})
 	wait(3)
