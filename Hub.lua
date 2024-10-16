@@ -67,8 +67,10 @@ function createNotification(title, content, notificationTime, zindex, brickColor
 	Notification:Destroy()
 end
 
-print("Enabling Anti Kick")
-enableClientAntikick()
+print("ArdaT Update Management")
+print("ARDAT QUATTRO Framework Loaded!")
+print("[ARDAT INFO]: Version 0.2 Pre Beta")
+warn("[ARDAT WARN]: WHITELIST DISABLED, CONSIDER CLIENT LAGS")
 
 if game.PlaceId == 6441847031 then
   print("Detected:Chaos")
