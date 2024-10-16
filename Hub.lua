@@ -67,29 +67,6 @@ function createNotification(title, content, notificationTime, zindex, brickColor
 	Notification:Destroy()
 end
 
-function enableClientAntikick()
-	local Players = game:GetService("Players")
-	if not hookmetamethod then 
-		createNotification("Uyarı!", "Hileniz (HookMetaMethod) fonksiyonunu desteklemiyor.", 3, 150, "Tr. Red")
-		return
-	end
-	local LocalPlayer = Players.LocalPlayer
-	local oldhmmi
-	local oldhmmnc
-	oldhmmi = hookmetamethod(game, "__index", function(self, method)
-		if self == LocalPlayer and method:lower() == "kick" then
-			return error("Expected ':' not '.' calling member function Kick", 2)
-		end
-		return oldhmmi(self, method)
-	end)
-	oldhmmnc = hookmetamethod(game, "__namecall", function(self, ...)
-		if self == LocalPlayer and getnamecallmethod():lower() == "kick" then
-			return
-		end
-		return oldhmmnc(self, ...)
-	end)
-end
-
 print("Enabling Anti Kick")
 enableClientAntikick()
 
